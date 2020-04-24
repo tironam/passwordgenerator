@@ -6,7 +6,7 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
 const passLength = parseInt(prompt('How many characters do you want?'))
 
-const lowerCar = 'abc'
+const lowerChar = 'abc'
 const upperChar = 'ABC'
 const numberChar = '123'
 const specialChar = '!@^'
@@ -22,6 +22,10 @@ let newPass = ' '
     return
   }
 
+  if (!lowC && !upC && !numC && !specC) {
+    alert(`You didn't pick anything!`)
+  }
+
   if (lowC) {
     passHolder += lowerChar;
   }
@@ -34,10 +38,6 @@ let newPass = ' '
   if (specC) {
     passHolder += specialChar;
   }
-
-if (!lowC && !upC && !numC && !specC) {
-  alert(`You didn't pick anything!`)
-}
 
   for (let i = 0; i < passLength; i++) {
     let randomIndex = Math.floor(Math.random() * passHolder.length)
