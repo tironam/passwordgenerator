@@ -6,10 +6,10 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
 const passLength = parseInt(prompt('How many characters do you want?'))
 
-const lowerChar = 'abc'
-const upperChar = 'ABC'
-const numberChar = '123'
-const specialChar = '!@^'
+const lowerChar = 'abcdefghijklmnopqrstuvwxyz'
+const upperChar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+const numberChar = '1234567890'
+const specialChar = '!@^#$%&*'
 const lowC = confirm('do you want lower case?')
 const upC = confirm('do you want upper case?')
 const numC = confirm('do you want number case?')
